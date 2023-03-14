@@ -1,0 +1,92 @@
+.app {
+  background-color: #00235b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container {
+  height: 90vh;
+  border: solid white 1px;
+}
+
+.head-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.head-container:first-child {
+  color: white;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form:first-child::placeholder {
+  color: white !important;
+}
+
+.todo-container {
+  display: grid;
+  margin: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 70vh;
+  gap: 20px;
+}
+
+.todo-container div {
+  border: 1px solid white;
+}
+
+.drag-over {
+  border: 1px dashed white;
+}
+
+.todo-container ul {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.todo-container ul::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: white;
+}
+.todo-container ul::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(163, 157, 157, 0.589);
+}
+.todo-container::-webkit-scrollbar-thumb {
+  background-color: rgb(233, 230, 230);
+  outline: 0.2rem solid rgb(144, 146, 148);
+}
+
+.todo-container-title {
+  margin-top: 0.5rem;
+  font-family: 'Satisfy', cursive !important;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.todo-container div > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  list-style: none;
+  color: white;
+  font-size: 40px;
+  padding: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+}
+
+.hide {
+  display: none;
+}
+
+.dragging {
+  opacity: 0.5;
+}
